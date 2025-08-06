@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Resume & Cover Letter Generator</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <h1><i class="fas fa-file-alt"></i> AI Resume Generator</h1>
+                <p>Create professional resumes and cover letters with AI-powered assistance</p>
+            </div>
+        </header>
+
+        <!-- Navigation Tabs -->
+        <nav class="nav-tabs">
+            <button class="tab-btn active" data-tab="resume">
+                <i class="fas fa-file-alt"></i> Resume Generator
+            </button>
+            <button class="tab-btn" data-tab="cover-letter">
+                <i class="fas fa-envelope"></i> Cover Letter Generator
+            </button>
+        </nav>
+
+        <!-- Resume Generator Section -->
+        <section id="resume" class="tab-content active">
+            <div class="form-container">
+                <h2><i class="fas fa-user"></i> Personal Information</h2>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="fullName">Full Name</label>
+                        <input type="text" id="fullName" placeholder="John Doe">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" placeholder="john.doe@email.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone</label>
+                        <input type="tel" id="phone" placeholder="+1 (555) 123-4567">
+                    </div>
+                    <div class="form-group">
+                        <label for="location">Location</label>
+                        <input type="text" id="location" placeholder="New York, NY">
+                    </div>
+                    <div class="form-group full-width">
+                        <label for="linkedin">LinkedIn Profile (Optional)</label>
+                        <input type="url" id="linkedin" placeholder="https://linkedin.com/in/johndoe">
+                    </div>
+                </div>
+
+                <h2><i class="fas fa-briefcase"></i> Professional Summary</h2>
+                <div class="form-group">
+                    <label for="summary">Professional Summary</label>
+                    <textarea id="summary" rows="4" placeholder="Brief overview of your professional background, key skills, and career objectives..."></textarea>
+                </div>
+
+                <h2><i class="fas fa-graduation-cap"></i> Education</h2>
+                <div class="form-group">
+                    <label for="education">Education Details</label>
+                    <textarea id="education" rows="3" placeholder="Degree, University, Graduation Year, GPA (if relevant)..."></textarea>
+                </div>
+
+                <h2><i class="fas fa-tools"></i> Skills</h2>
+                <div class="form-group">
+                    <label for="skills">Technical & Soft Skills</label>
+                    <textarea id="skills" rows="3" placeholder="List your key skills (e.g., JavaScript, React, Project Management, Leadership)..."></textarea>
+                </div>
+
+                <h2><i class="fas fa-history"></i> Work Experience</h2>
+                <div class="form-group">
+                    <label for="experience">Work Experience</label>
+                    <textarea id="experience" rows="6" placeholder="Include job titles, companies, dates, and key achievements with quantifiable results..."></textarea>
+                </div>
+
+                <h2><i class="fas fa-trophy"></i> Projects & Achievements</h2>
+                <div class="form-group">
+                    <label for="projects">Projects & Achievements (Optional)</label>
+                    <textarea id="projects" rows="4" placeholder="Notable projects, awards, certifications, or other achievements..."></textarea>
+                </div>
+
+                <h2><i class="fas fa-search"></i> Job Requirements</h2>
+                <div class="form-group">
+                    <label for="jobRequirements">Target Job Description & Requirements</label>
+                    <textarea id="jobRequirements" rows="5" placeholder="Paste the job description and requirements here to tailor your resume..."></textarea>
+                </div>
+
+                <h2><i class="fas fa-palette"></i> Template Style</h2>
+                <div class="template-options">
+                    <label class="template-option">
+                        <input type="radio" name="resumeTemplate" value="modern" checked>
+                        <span class="template-card">
+                            <i class="fas fa-star"></i>
+                            <strong>Modern</strong>
+                            <small>Clean and professional</small>
+                        </span>
+                    </label>
+                    <label class="template-option">
+                        <input type="radio" name="resumeTemplate" value="classic">
+                        <span class="template-card">
+                            <i class="fas fa-book"></i>
+                            <strong>Classic</strong>
+                            <small>Traditional format</small>
+                        </span>
+                    </label>
+                    <label class="template-option">
+                        <input type="radio" name="resumeTemplate" value="creative">
+                        <span class="template-card">
+                            <i class="fas fa-paint-brush"></i>
+                            <strong>Creative</strong>
+                            <small>Stand out design</small>
+                        </span>
+                    </label>
+                </div>
+
+                <button class="generate-btn" onclick="generateResume()">
+                    <i class="fas fa-magic"></i> Generate Resume
+                </button>
+            </div>
+        </section>
+
+        <!-- Cover Letter Generator Section -->
+        <section id="cover-letter" class="tab-content">
+            <div class="form-container">
+                <h2><i class="fas fa-user"></i> Personal Information</h2>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="clFullName">Full Name</label>
+                        <input type="text" id="clFullName" placeholder="John Doe">
+                    </div>
+                    <div class="form-group">
+                        <label for="clEmail">Email</label>
+                        <input type="email" id="clEmail" placeholder="john.doe@email.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="clPhone">Phone</label>
+                        <input type="tel" id="clPhone" placeholder="+1 (555) 123-4567">
+                    </div>
+                    <div class="form-group">
+                        <label for="clLocation">Location</label>
+                        <input type="text" id="clLocation" placeholder="New York, NY">
+                    </div>
+                </div>
+
+                <h2><i class="fas fa-building"></i> Company Information</h2>
+                <div class="form-group">
+                    <label for="companyName">Company Name</label>
+                    <input type="text" id="companyName" placeholder="Tech Company Inc.">
+                </div>
+                <div class="form-group">
+                    <label for="hiringManager">Hiring Manager (Optional)</label>
+                    <input type="text" id="hiringManager" placeholder="Jane Smith">
+                </div>
+                <div class="form-group">
+                    <label for="companyInfo">Company Information</label>
+                    <textarea id="companyInfo" rows="3" placeholder="Brief information about the company, their mission, values, or recent news..."></textarea>
+                </div>
+
+                <h2><i class="fas fa-search"></i> Job Requirements</h2>
+                <div class="form-group">
+                    <label for="clJobRequirements">Job Description & Requirements</label>
+                    <textarea id="clJobRequirements" rows="5" placeholder="Paste the job description and requirements here..."></textarea>
+                </div>
+
+                <h2><i class="fas fa-user-tie"></i> Your Experience</h2>
+                <div class="form-group">
+                    <label for="relevantExperience">Relevant Experience & Skills</label>
+                    <textarea id="relevantExperience" rows="4" placeholder="Highlight your most relevant experience and skills for this position..."></textarea>
+                </div>
+
+                <h2><i class="fas fa-palette"></i> Template Style</h2>
+                <div class="template-options">
+                    <label class="template-option">
+                        <input type="radio" name="coverLetterTemplate" value="professional" checked>
+                        <span class="template-card">
+                            <i class="fas fa-handshake"></i>
+                            <strong>Professional</strong>
+                            <small>Formal and polished</small>
+                        </span>
+                    </label>
+                    <label class="template-option">
+                        <input type="radio" name="coverLetterTemplate" value="enthusiastic">
+                        <span class="template-card">
+                            <i class="fas fa-heart"></i>
+                            <strong>Enthusiastic</strong>
+                            <small>Passionate and engaging</small>
+                        </span>
+                    </label>
+                    <label class="template-option">
+                        <input type="radio" name="coverLetterTemplate" value="concise">
+                        <span class="template-card">
+                            <i class="fas fa-compress-alt"></i>
+                            <strong>Concise</strong>
+                            <small>Brief and to the point</small>
+                        </span>
+                    </label>
+                </div>
+
+                <button class="generate-btn" onclick="generateCoverLetter()">
+                    <i class="fas fa-magic"></i> Generate Cover Letter
+                </button>
+            </div>
+        </section>
+
+        <!-- Results Section -->
+        <section id="results" class="tab-content">
+            <div class="results-container">
+                <div class="results-header">
+                    <h2><i class="fas fa-check-circle"></i> Generated Document</h2>
+                    <div class="export-buttons">
+                        <button class="export-btn" onclick="exportToPDF()">
+                            <i class="fas fa-file-pdf"></i> Export PDF
+                        </button>
+                        <button class="export-btn" onclick="exportToWord()">
+                            <i class="fas fa-file-word"></i> Export Word
+                        </button>
+                        <button class="export-btn" onclick="copyToClipboard()">
+                            <i class="fas fa-copy"></i> Copy HTML
+                        </button>
+                    </div>
+                </div>
+                <div id="generatedContent" class="generated-content"></div>
+            </div>
+        </section>
+
+        <!-- Loading Overlay -->
+        <div id="loadingOverlay" class="loading-overlay">
+            <div class="loading-content">
+                <div class="spinner"></div>
+                <h3>Generating your document...</h3>
+                <p>This may take a few moments</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
