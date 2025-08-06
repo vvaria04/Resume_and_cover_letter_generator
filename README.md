@@ -1,33 +1,33 @@
-# 🤖 AI Resume & Cover Letter Generator
+# AI Resume & Cover Letter Generator
 
 A powerful, AI-powered application that generates professional resumes and cover letters using the Gemini API. Features a beautiful, modern interface with multiple export options.
 
-## ✨ Features
+## Features
 
-### 🎯 **Core Functionality**
+### **Core Functionality**
 - **AI-Powered Generation**: Uses Google's Gemini API for intelligent content creation
 - **Resume Generator**: Create tailored resumes based on job requirements
 - **Cover Letter Generator**: Generate compelling cover letters for specific positions
 - **Multiple Templates**: Choose from Modern, Classic, and Creative styles
 
-### 📄 **Export Options**
+### **Export Options**
 - **PDF Export**: High-quality PDF documents with professional formatting
 - **Word Document**: Editable .docx files for further customization
 - **HTML Copy**: Copy generated content as HTML for web use
 
-### 🎨 **User Experience**
+### **User Experience**
 - **Beautiful Interface**: Modern, responsive design with smooth animations
 - **Form Validation**: Real-time validation with helpful error messages
 - **Auto-Save**: Form data is automatically saved to localStorage
 - **Keyboard Shortcuts**: Quick access with Ctrl/Cmd + Enter to generate
 - **Loading States**: Professional loading animations during generation
 
-### 📱 **Responsive Design**
+### **Responsive Design**
 - **Mobile-Friendly**: Works perfectly on all device sizes
 - **Touch-Optimized**: Optimized for touch interactions
 - **Cross-Browser**: Compatible with all modern browsers
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Prerequisites
 - Node.js (v14 or higher)
@@ -67,7 +67,7 @@ A powerful, AI-powered application that generates professional resumes and cover
 5. **Open your browser**
    Navigate to `http://localhost:3000`
 
-## 🔧 Configuration
+## Configuration
 
 ### Environment Variables
 
@@ -84,7 +84,7 @@ A powerful, AI-powered application that generates professional resumes and cover
 3. Create a new API key
 4. Copy the key and add it to your `.env` file
 
-## 📖 Usage Guide
+## Usage Guide
 
 ### Generating a Resume
 
@@ -133,7 +133,7 @@ A powerful, AI-powered application that generates professional resumes and cover
    - **Enthusiastic**: Passionate and engaging
    - **Concise**: Brief and to the point
 
-## 🛠️ Development
+## Development
 
 ### Project Structure
 ```
@@ -167,7 +167,7 @@ npm run build      # Install dependencies
 | `/api/export-docx` | POST | Export content as Word document |
 | `/download/:filename` | GET | Download generated files |
 
-## 🎨 Customization
+## Customization
 
 ### Adding New Templates
 
@@ -188,14 +188,14 @@ The application uses CSS custom properties for easy theming:
 }
 ```
 
-## 🔒 Security Considerations
+## Security Considerations
 
 - **API Key Protection**: Never commit your `.env` file
 - **Input Validation**: All user inputs are validated
 - **Error Handling**: Comprehensive error handling throughout
 - **Rate Limiting**: Consider implementing rate limiting for production
 
-## 🚀 Deployment
+## Deployment
 
 ### Heroku Deployment
 
@@ -226,7 +226,7 @@ The application uses CSS custom properties for easy theming:
    vercel
    ```
 
-## 🤝 Contributing
+## Contributing
 
 1. Fork the repository
 2. Create a feature branch (`git checkout -b feature/amazing-feature`)
@@ -235,7 +235,7 @@ The application uses CSS custom properties for easy theming:
 5. Open a Pull Request
 
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - **Google Gemini API** for AI-powered content generation
 - **Font Awesome** for beautiful icons
