@@ -234,9 +234,6 @@ The application uses CSS custom properties for easy theming:
 4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
 
-## 📝 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## 🙏 Acknowledgments
 
@@ -246,13 +243,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - **Express.js** for the backend framework
 - **Puppeteer** for PDF generation
 
-## 📞 Support
-
-If you encounter any issues or have questions:
-
-1. Check the [Issues](https://github.com/your-repo/issues) page
-2. Create a new issue with detailed information
-3. Include your Node.js version and operating system
+© vvaria04 2025
 
 ---
 
